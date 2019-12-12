@@ -62,7 +62,7 @@
 
 "btn_write_claim_request_email" = "填寫索償保險電郵";
 
-"cancel" = "";
+"cancel" = "取消";
 
 "cancel_order" = "取消訂單";
 
@@ -274,6 +274,10 @@
 
 "invoice_remark" = "其他備註（如有）";
 
+"item_count.other" = "%d件";
+
+"item_count.zero" = "%d件";
+
 "item_description" = "描述：";
 
 "item_price_range" = "價位：";
@@ -404,7 +408,7 @@
 
 "label_wallet_balance" = "錢包結餘";
 
-"main_title" = "";
+"main_title" = "主頁";
 
 "medium_truck" = "3.5噸貨車";
 
@@ -537,7 +541,7 @@
 "placeholder_search_or_add_name" = "搜尋或新增名稱";
 
 /* e.g., 1 piece of cake (Total HK$10.99) */
-"placeholder_test" = "";
+"placeholder_test" = "%2$@ x%1$d件 （總共%3$.2f蚊）";
 
 "please_contact_cs_error_extra" = "如需取消訂單，請致電客戶服務熱線";
 
