@@ -25,6 +25,7 @@
 		D8F378D623A2450D000FC770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F378D523A2450D000FC770 /* ContentView.swift */; };
 		D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5223A7597F00E6C7F0 /* HostingController.swift */; };
 		D8F76A5623A75DB200E6C7F0 /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */; };
+		D8F76A5A23A7704800E6C7F0 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5923A7704800E6C7F0 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,9 @@
 		D8F378D523A2450D000FC770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8F76A5223A7597F00E6C7F0 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocale.swift; sourceTree = "<group>"; };
+		D8F76A5723A76D1C00E6C7F0 /* Develop.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Develop.xcconfig; sourceTree = "<group>"; };
+		D8F76A5823A76D6B00E6C7F0 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		D8F76A5923A7704800E6C7F0 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F71173E138DC4CDB1847E32A /* Pods-RSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSwiftDemo/Pods-RSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,8 @@
 			children = (
 				D85E6A90213CD27E0041D153 /* R.generated.swift */,
 				D85E6A8C213CCE5A0041D153 /* RSwiftDemo-Bridging-Header.h */,
+				D8F76A5723A76D1C00E6C7F0 /* Develop.xcconfig */,
+				D8F76A5823A76D6B00E6C7F0 /* Production.xcconfig */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */,
+				D8F76A5923A7704800E6C7F0 /* Environment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,6 +360,7 @@
 				D85E6A8F213CCE5B0041D153 /* NSBundle+Language.m in Sources */,
 				D8F378D623A2450D000FC770 /* ContentView.swift in Sources */,
 				D8F76A5623A75DB200E6C7F0 /* AppLocale.swift in Sources */,
+				D8F76A5A23A7704800E6C7F0 /* Environment.swift in Sources */,
 				D85E6A91213CD27F0041D153 /* R.generated.swift in Sources */,
 				D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */,
 				D8B2F6F82138DC920074D4A9 /* AppDelegate.swift in Sources */,
@@ -405,6 +413,7 @@
 /* Begin XCBuildConfiguration section */
 		D8B2F7042138DC930074D4A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F76A5723A76D1C00E6C7F0 /* Develop.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -466,6 +475,7 @@
 		};
 		D8B2F7052138DC930074D4A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F76A5823A76D6B00E6C7F0 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -521,7 +531,7 @@
 		};
 		D8B2F7072138DC930074D4A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2FB55E9D472C9913AAA9A72 /* Pods-RSwiftDemo.debug.xcconfig */;
+			baseConfigurationReference = D8F76A5723A76D1C00E6C7F0 /* Develop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -543,7 +553,7 @@
 		};
 		D8B2F7082138DC930074D4A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F71173E138DC4CDB1847E32A /* Pods-RSwiftDemo.release.xcconfig */;
+			baseConfigurationReference = D8F76A5823A76D6B00E6C7F0 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

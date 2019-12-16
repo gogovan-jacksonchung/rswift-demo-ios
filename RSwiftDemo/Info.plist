@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>PhraseApp Distribution ID</key>
+	<string>$(PHRASEAPP_OTA_DISTRIBUTION_ID)</string>
+	<key>PhraseApp Environment Token</key>
+	<string>$(PHRASEAPP_OTA_ENV_TOKEN)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AveriaLibre-B.ttf</string>
