@@ -25,6 +25,8 @@
 		D8B6BA1E213D045D0065119D /* AveriaLibre-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B6BA19213D045D0065119D /* AveriaLibre-L.ttf */; };
 		D8B6BA1F213D045D0065119D /* GdyBkltter1911.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B6BA1A213D045D0065119D /* GdyBkltter1911.ttf */; };
 		D8B6BA20213D045D0065119D /* AveriaLibre.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B6BA1B213D045D0065119D /* AveriaLibre.ttf */; };
+		D8F378D623A2450D000FC770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F378D523A2450D000FC770 /* ContentView.swift */; };
+		D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5223A7597F00E6C7F0 /* HostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		D8F378D223A23E1E000FC770 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-HK"; path = "zh-HK.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D8F378D323A23E3E000FC770 /* en-SG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-SG"; path = "en-SG.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D8F378D423A23E3E000FC770 /* en-SG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "en-SG"; path = "en-SG.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D8F378D523A2450D000FC770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8F76A5223A7597F00E6C7F0 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		F71173E138DC4CDB1847E32A /* Pods-RSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSwiftDemo/Pods-RSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,7 @@
 		D8B2F6F62138DC920074D4A9 /* RSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8F76A5123A7595800E6C7F0 /* ViewControllers */,
 				D85E6A8A213CCE210041D153 /* Third Parties */,
 				D8B2F71721393DF70074D4A9 /* Views */,
 				D8B2F70D2138DEEA0074D4A9 /* Resources */,
@@ -174,6 +179,7 @@
 			children = (
 				D8B2F71821393E1A0074D4A9 /* MyTableViewCell.swift */,
 				D8B2F71921393E1A0074D4A9 /* MyTableViewCell.xib */,
+				D8F378D523A2450D000FC770 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +194,14 @@
 				D8B6BA1A213D045D0065119D /* GdyBkltter1911.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D8F76A5123A7595800E6C7F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8F76A5223A7597F00E6C7F0 /* HostingController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +351,9 @@
 			files = (
 				D8B2F6FA2138DC920074D4A9 /* ViewController.swift in Sources */,
 				D85E6A8F213CCE5B0041D153 /* NSBundle+Language.m in Sources */,
+				D8F378D623A2450D000FC770 /* ContentView.swift in Sources */,
 				D85E6A91213CD27F0041D153 /* R.generated.swift in Sources */,
+				D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */,
 				D8B2F71A21393E1A0074D4A9 /* MyTableViewCell.swift in Sources */,
 				D8B2F6F82138DC920074D4A9 /* AppDelegate.swift in Sources */,
 			);
