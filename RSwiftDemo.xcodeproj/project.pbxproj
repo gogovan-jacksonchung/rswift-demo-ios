@@ -131,17 +131,12 @@
 		D8B2F6F62138DC920074D4A9 /* RSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D8F76A5123A7595800E6C7F0 /* ViewControllers */,
 				D85E6A8A213CCE210041D153 /* Third Parties */,
+				D8F76A5123A7595800E6C7F0 /* ViewControllers */,
 				D8B2F71721393DF70074D4A9 /* Views */,
 				D8B2F70D2138DEEA0074D4A9 /* Resources */,
 				D8B2F70A2138DE450074D4A9 /* Supporting Files */,
 				D8B2F6F72138DC920074D4A9 /* AppDelegate.swift */,
-				D8B2F6F92138DC920074D4A9 /* ViewController.swift */,
-				D8B2F6FB2138DC920074D4A9 /* Main.storyboard */,
-				D8B2F6FE2138DC930074D4A9 /* Assets.xcassets */,
-				D8B2F7002138DC930074D4A9 /* LaunchScreen.storyboard */,
-				D8B2F7032138DC930074D4A9 /* Info.plist */,
 			);
 			path = RSwiftDemo;
 			sourceTree = "<group>";
@@ -149,6 +144,7 @@
 		D8B2F70A2138DE450074D4A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8B2F7032138DC930074D4A9 /* Info.plist */,
 				D85E6A90213CD27E0041D153 /* R.generated.swift */,
 				D85E6A8C213CCE5A0041D153 /* RSwiftDemo-Bridging-Header.h */,
 			);
@@ -158,7 +154,9 @@
 		D8B2F70D2138DEEA0074D4A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8B2F6FE2138DC930074D4A9 /* Assets.xcassets */,
 				D8B6BA16213D04390065119D /* Fonts */,
+				D8B2F7002138DC930074D4A9 /* LaunchScreen.storyboard */,
 				D8B2F712213930590074D4A9 /* Localizable.strings */,
 				D8553F9F218AA8E000188466 /* Localizable.stringsdict */,
 				D8B2F7142139337A0074D4A9 /* Sounds */,
@@ -200,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				D8F76A5223A7597F00E6C7F0 /* HostingController.swift */,
+				D8B2F6FB2138DC920074D4A9 /* Main.storyboard */,
+				D8B2F6F92138DC920074D4A9 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
