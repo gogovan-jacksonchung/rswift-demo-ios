@@ -16,15 +16,25 @@ struct TextRow: Identifiable {
 }
 
 struct ContentView: View {
+    @State
+    var rowList: [TextRow] = []
+    
+    private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong]
     
     @State
-    var rowList: [TextRow] = [TextRow(title: R.string.localizable.address(), key: "address"),
-                              TextRow(title: R.string.localizable.done(), key: "done"),
-                              TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
-                              TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
-                              TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
-                              TextRow(title: R.string.localizable.placeholder_test(1, "cake", 10.99), key: "placeholder_test")
-    ]
+    var showLocaleActionSheet = false
+    var localeSelectionActionSheet: ActionSheet {
+        var buttons: [ActionSheet.Button] = locales.map { locale in
+            return .default(Text(locale.description)) {
+                print(locale.description)
+                self.updateLocale(locale)
+            }
+        }
+        buttons.append(.cancel(Text(R.string.localizable.cancel()), action: { self.showLocaleActionSheet = false } ))
+        return ActionSheet(title: Text("Select Locale"),
+                           message: nil,
+                           buttons: buttons)
+    }
     
     var body: some View {
         NavigationView {
@@ -37,12 +47,31 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(Text(R.string.localizable.main_title()))
-            .navigationBarItems(trailing: Button(action: showLocaleSelectionList, label: { Text("Locale")}))
-        }
+            .navigationBarItems(trailing: Button(action: showLocaleSelectionList,
+                                                 label: { Text("Locale") })
+                .actionSheet(isPresented: $showLocaleActionSheet, content: { self.localeSelectionActionSheet} )
+            )
+        }.onAppear( perform: { self.updateLocale(.english) } )
     }
     
     private func showLocaleSelectionList() {
-        
+        self.showLocaleActionSheet.toggle()
+    }
+    
+    func updateLocale(_ locale: AppLocale) {
+        Bundle.setLanguage(locale.localeString)
+        self.refreshView()
+    }
+    
+    private func refreshView() {
+        let rowList: [TextRow] = [TextRow(title: R.string.localizable.address(), key: "address"),
+                                  TextRow(title: R.string.localizable.done(), key: "done"),
+                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
+                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
+                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
+                                  TextRow(title: R.string.localizable.placeholder_test(1, "cake", 10.99), key: "placeholder_test")
+        ]
+        self.rowList = rowList
     }
 }
 

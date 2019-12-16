@@ -27,6 +27,7 @@
 		D8B6BA20213D045D0065119D /* AveriaLibre.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B6BA1B213D045D0065119D /* AveriaLibre.ttf */; };
 		D8F378D623A2450D000FC770 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F378D523A2450D000FC770 /* ContentView.swift */; };
 		D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5223A7597F00E6C7F0 /* HostingController.swift */; };
+		D8F76A5623A75DB200E6C7F0 /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		D8F378D423A23E3E000FC770 /* en-SG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "en-SG"; path = "en-SG.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D8F378D523A2450D000FC770 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8F76A5223A7597F00E6C7F0 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocale.swift; sourceTree = "<group>"; };
 		F71173E138DC4CDB1847E32A /* Pods-RSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSwiftDemo/Pods-RSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,12 +133,14 @@
 		D8B2F6F62138DC920074D4A9 /* RSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8F76A5423A75DA500E6C7F0 /* Models */,
 				D85E6A8A213CCE210041D153 /* Third Parties */,
 				D8F76A5123A7595800E6C7F0 /* ViewControllers */,
 				D8B2F71721393DF70074D4A9 /* Views */,
 				D8B2F70D2138DEEA0074D4A9 /* Resources */,
 				D8B2F70A2138DE450074D4A9 /* Supporting Files */,
 				D8B2F6F72138DC920074D4A9 /* AppDelegate.swift */,
+				D8B2F7032138DC930074D4A9 /* Info.plist */,
 			);
 			path = RSwiftDemo;
 			sourceTree = "<group>";
@@ -144,7 +148,6 @@
 		D8B2F70A2138DE450074D4A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D8B2F7032138DC930074D4A9 /* Info.plist */,
 				D85E6A90213CD27E0041D153 /* R.generated.swift */,
 				D85E6A8C213CCE5A0041D153 /* RSwiftDemo-Bridging-Header.h */,
 			);
@@ -202,6 +205,14 @@
 				D8B2F6F92138DC920074D4A9 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D8F76A5423A75DA500E6C7F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8F76A5523A75DB200E6C7F0 /* AppLocale.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				D8B2F6FA2138DC920074D4A9 /* ViewController.swift in Sources */,
 				D85E6A8F213CCE5B0041D153 /* NSBundle+Language.m in Sources */,
 				D8F378D623A2450D000FC770 /* ContentView.swift in Sources */,
+				D8F76A5623A75DB200E6C7F0 /* AppLocale.swift in Sources */,
 				D85E6A91213CD27F0041D153 /* R.generated.swift in Sources */,
 				D8F76A5323A7597F00E6C7F0 /* HostingController.swift in Sources */,
 				D8B2F71A21393E1A0074D4A9 /* MyTableViewCell.swift in Sources */,
