@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import PhraseApp
 
 struct TextRow: Identifiable {
     var id: String = UUID().uuidString
@@ -19,8 +20,11 @@ struct ContentView: View {
     @State
     var rowList: [TextRow] = []
     
+    private var currentLocale = AppLocale.english
     private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong]
     
+    @State
+    var showUpdateFailAlert = false
     @State
     var showLocaleActionSheet = false
     var localeSelectionActionSheet: ActionSheet {
@@ -47,15 +51,31 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(Text(R.string.localizable.main_title()))
-            .navigationBarItems(trailing: Button(action: showLocaleSelectionList,
-                                                 label: { Text("Locale") })
-                .actionSheet(isPresented: $showLocaleActionSheet, content: { self.localeSelectionActionSheet} )
+            .navigationBarItems(leading: Button(action: updateLocale, label: { Text("Update") }),
+                                trailing: Button(action: showLocaleSelectionList, label: { Text("Locale") })
+                                    .actionSheet(isPresented: $showLocaleActionSheet, content: { self.localeSelectionActionSheet })
             )
-        }.onAppear( perform: { self.updateLocale(.english) } )
+        }
+        .onAppear( perform: { self.updateLocale(.english) } )
+        .alert(isPresented: $showUpdateFailAlert) { () -> Alert in
+            Alert(title: Text("Failed to update"), message: nil, dismissButton: .cancel())
+        }
     }
     
     private func showLocaleSelectionList() {
         self.showLocaleActionSheet.toggle()
+    }
+    
+    private func updateLocale() {
+        try? PhraseApp.shared.updateTranslations { result in
+            switch result {
+            case .success(let update):
+                print("Is Localiation updated? \(update)")
+                self.updateLocale(self.currentLocale)
+            case .failure:
+                self.showUpdateFailAlert = true
+            }
+        }
     }
     
     func updateLocale(_ locale: AppLocale) {

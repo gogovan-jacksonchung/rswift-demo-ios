@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhraseApp
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let distribtionId = Environment.configuration(keyName: .phraseAppDistributionId)
+        let envToken = Environment.configuration(keyName: .phraseaAppEnvToken)
+        PhraseApp.shared.setup(distributionID: distribtionId, environmentToken: envToken)
+        
         return true
     }
 
