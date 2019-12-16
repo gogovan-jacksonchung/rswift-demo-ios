@@ -1,4 +1,4 @@
-"address" = "";
+"address" = "Address";
 
 "address_country_mismatch_message" = "";
 
@@ -28,7 +28,7 @@
 
 "browse" = "";
 
-"btn_add_photo" = "";
+"btn_add_photo" = "Add photo";
 
 "btn_cancel_order" = "";
 
@@ -116,7 +116,7 @@
 
 "custom_proxy_buying_list" = "";
 
-"date" = "";
+"date" = "Date";
 
 "delete" = "";
 
@@ -168,7 +168,7 @@
 
 "disagree_continue" = "";
 
-"done" = "";
+"done" = "Done";
 
 "driver_arrival_pickup_point" = "";
 
@@ -394,7 +394,7 @@
 
 "label_topUp_with" = "";
 
-"label_total" = "";
+"label_total" = "Total";
 
 "label_total_fee" = "";
 
@@ -502,9 +502,9 @@
 
 "order_released_title" = "";
 
-"order_saved" = "";
+"order_saved" = "Saved";
 
-"order_waiting_to_proceed" = "";
+"order_waiting_to_proceed" = "Waiting to proceed";
 
 "password_do_not_match" = "";
 
@@ -591,7 +591,7 @@
 
 "push_order_completed" = "";
 
-"receipt_auto_send" = "";
+"receipt_auto_send" = "Receipt auto send";
 
 "receipt_disclaimer" = "";
 
@@ -627,7 +627,7 @@
 
 "reset" = "";
 
-"reuse_route" = "";
+"reuse_route" = "Reuse route";
 
 "reuse_this_route" = "";
 
@@ -641,7 +641,7 @@
 
 "save" = "";
 
-"save_addr" = "";
+"save_addr" = "Save address";
 
 "save_this_as_home_address" = "";
 
