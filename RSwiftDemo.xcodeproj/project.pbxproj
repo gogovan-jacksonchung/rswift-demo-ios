@@ -38,6 +38,10 @@
 		D85E6A8D213CCE5A0041D153 /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
 		D85E6A8E213CCE5B0041D153 /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
 		D85E6A90213CD27E0041D153 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D880A9D524654131006C58D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D880A9D624654131006C58D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		D880A9D724654190006C58D0 /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "vi-VN"; path = "vi-VN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D880A9D824654190006C58D0 /* vi-VN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "vi-VN"; path = "vi-VN.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		D88CC04923F6748D00CE92DB /* Localize_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localize_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B2F6F42138DC920074D4A9 /* RSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B2F6F72138DC920074D4A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				"zh-Hant",
 				"zh-HK",
 				"en-SG",
+				"zh-Hans",
+				"vi-VN",
 			);
 			mainGroup = D8B2F6EB2138DC920074D4A9;
 			productRefGroup = D8B2F6F52138DC920074D4A9 /* Products */;
@@ -383,6 +389,8 @@
 				D8553FA2218AA8EC00188466 /* zh-Hant */,
 				D8F378D223A23E1E000FC770 /* zh-HK */,
 				D8F378D423A23E3E000FC770 /* en-SG */,
+				D880A9D624654131006C58D0 /* zh-Hans */,
+				D880A9D824654190006C58D0 /* vi-VN */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -410,6 +418,8 @@
 				D8B2F713213930840074D4A9 /* zh-Hant */,
 				D8F378D123A23E1E000FC770 /* zh-HK */,
 				D8F378D323A23E3E000FC770 /* en-SG */,
+				D880A9D524654131006C58D0 /* zh-Hans */,
+				D880A9D724654190006C58D0 /* vi-VN */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
