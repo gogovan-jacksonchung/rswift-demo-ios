@@ -11,6 +11,6 @@
 
 #include "Pods/Target Support Files/Pods-RSwiftDemo/Pods-RSwiftDemo.release.xcconfig"
 
-PHRASEAPP_OTA_DISTRIBUTION_ID = e093cc3b7867527dacbee28fc9465a60
-PHRASEAPP_OTA_ENV_TOKEN = S-y7TRl3iickWBxI4_rrJRD7lxB3qC8c_Ls5T1FnAu0
+PHRASEAPP_OTA_DISTRIBUTION_ID = beb0937e927aecccd6fa39a179df3d9e
+PHRASEAPP_OTA_ENV_TOKEN = 1tgHltbRZjejIptmMyXW6RpJ2__nco149gb3KE-RTlE
  
