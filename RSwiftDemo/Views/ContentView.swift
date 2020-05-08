@@ -22,7 +22,7 @@ struct ContentView: View {
     var rowList: [TextRow] = []
     
     private var currentLocale = AppLocale.english
-    private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong]
+    private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong, .vietnamese]
     
     @State
     var showUpdateFailAlert = false
@@ -35,7 +35,7 @@ struct ContentView: View {
                 self.updateLocale(locale)
             }
         }
-        buttons.append(.cancel(Text(R.string.localizable.cancel()), action: { self.showLocaleActionSheet = false } ))
+        buttons.append(.cancel(Text("Cancel"), action: { self.showLocaleActionSheet = false } ))
         return ActionSheet(title: Text("Select Locale"),
                            message: nil,
                            buttons: buttons)
@@ -51,7 +51,7 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }
             }
-            .navigationBarTitle(Text(R.string.localizable.main_title()))
+            .navigationBarTitle(Text(R.string.localizable.app_name()))
             .navigationBarItems(leading: Button(action: updateLocale, label: { Text("Update") }),
                                 trailing: Button(action: showLocaleSelectionList, label: { Text("Locale") })
                                     .actionSheet(isPresented: $showLocaleActionSheet, content: { self.localeSelectionActionSheet })
@@ -80,17 +80,21 @@ struct ContentView: View {
     }
     
     func updateLocale(_ locale: AppLocale) {
+//        Localize.setCurrentLanguage(locale.localeString)
         Bundle.setLanguage(locale.localeString)
         self.refreshView()
     }
     
     private func refreshView() {
-        let rowList: [TextRow] = [TextRow(title: R.string.localizable.address(), key: "address"),
-                                  TextRow(title: R.string.localizable.done(), key: "done"),
-                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
-                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
-                                  TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
-                                  TextRow(title: R.string.localizable.placeholder_test(1, "cake", 10.99), key: "placeholder_test")
+        let rowList: [TextRow] = [
+            TextRow(title: R.string.localizable.app_name(), key: "app_name"),
+            TextRow(title: R.string.localizable.hello(), key: "hello")
+//            TextRow(title: R.string.localizable.address(), key: "address"),
+//            TextRow(title: R.string.localizable.done(), key: "done"),
+//            TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
+//            TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
+//            TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
+//            TextRow(title: R.string.localizable.placeholder_test(1, "cake", 10.99), key: "placeholder_test")
         ]
         self.rowList = rowList
     }

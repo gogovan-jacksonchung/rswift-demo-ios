@@ -13,6 +13,7 @@ enum AppLocale: String, CustomStringConvertible {
     case englishSingapore = "en-SG"
     case traditionalChineseHongKong = "zh-HK"
     case traditionalChineseTaiwan = "zh-Hant"
+    case vietnamese = "vi-VN"
     
     var description: String {
         switch self {
@@ -24,6 +25,8 @@ enum AppLocale: String, CustomStringConvertible {
             return "繁體中文（香港）"
         case .traditionalChineseTaiwan:
             return "繁體中文"
+        case .vietnamese:
+            return "Vietnamese"
         }
     }
     
