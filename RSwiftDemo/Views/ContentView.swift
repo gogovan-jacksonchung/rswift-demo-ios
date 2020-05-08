@@ -7,7 +7,8 @@
 //
 
 import SwiftUI
-import PhraseApp
+import PhraseSDK
+import Localize_Swift
 
 struct TextRow: Identifiable {
     var id: String = UUID().uuidString
@@ -67,7 +68,7 @@ struct ContentView: View {
     }
     
     private func updateLocale() {
-        try? PhraseApp.shared.updateTranslations { result in
+        try? Phrase.shared.updateTranslations { result in
             switch result {
             case .success(let update):
                 print("Is Localiation updated? \(update)")

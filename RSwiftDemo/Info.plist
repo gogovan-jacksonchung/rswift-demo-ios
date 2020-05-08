@@ -24,6 +24,8 @@
 	<string>$(PHRASEAPP_OTA_DISTRIBUTION_ID)</string>
 	<key>PhraseApp Environment Token</key>
 	<string>$(PHRASEAPP_OTA_ENV_TOKEN)</string>
+	<key>PhraseAppMainBundleProxyEnabled</key>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AveriaLibre-B.ttf</string>

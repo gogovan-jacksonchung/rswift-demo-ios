@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PhraseApp
+import PhraseSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let distribtionId = Environment.configuration(keyName: .phraseAppDistributionId)
         let envToken = Environment.configuration(keyName: .phraseaAppEnvToken)
-        PhraseApp.shared.setup(distributionID: distribtionId, environmentToken: envToken)
+        Phrase.shared.setup(distributionID: distribtionId, environmentSecret: envToken)
         
         return true
     }
