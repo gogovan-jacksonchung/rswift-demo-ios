@@ -12,29 +12,11 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>d</string>
         <key>one</key>
-        <string>1 item</string>
+        <string>%@ item</string>
         <key>other</key>
-        <string>%d items</string>
+        <string>%@ items</string>
         <key>zero</key>
-        <string/>
-      </dict>
-    </dict>
-    <key>number_of_driver_notified</key>
-    <dict>
-      <key>NSStringLocalizedFormatKey</key>
-      <string>%#@localized_format_key@</string>
-      <key>localized_format_key</key>
-      <dict>
-        <key>NSStringFormatSpecTypeKey</key>
-        <string>NSStringPluralRuleType</string>
-        <key>NSStringFormatValueTypeKey</key>
-        <string>d</string>
-        <key>one</key>
-        <string/>
-        <key>other</key>
-        <string/>
-        <key>zero</key>
-        <string/>
+        <string>%@ item</string>
       </dict>
     </dict>
   </dict>

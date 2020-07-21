@@ -12,25 +12,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>d</string>
         <key>other</key>
-        <string>%d件</string>
+        <string>%@件</string>
         <key>zero</key>
-        <string>%d件</string>
-      </dict>
-    </dict>
-    <key>number_of_driver_notified</key>
-    <dict>
-      <key>NSStringLocalizedFormatKey</key>
-      <string>%#@localized_format_key@</string>
-      <key>localized_format_key</key>
-      <dict>
-        <key>NSStringFormatSpecTypeKey</key>
-        <string>NSStringPluralRuleType</string>
-        <key>NSStringFormatValueTypeKey</key>
-        <string>d</string>
-        <key>other</key>
-        <string>正在發送訂單給您附近司機……</string>
-        <key>zero</key>
-        <string/>
+        <string>%@件</string>
       </dict>
     </dict>
   </dict>
