@@ -92,6 +92,9 @@ struct ContentView: View {
         let rowList: [TextRow] = [
             TextRow(title: R.string.localizable.app_name(), key: "app_name"),
             TextRow(title: R.string.localizable.hello(), key: "hello"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
             TextRow(title: Phrase.shared.localizedString(forKey: "app_name", value: nil, table: nil), key: "app_name"),
             TextRow(title: Phrase.shared.localizedString(forKey: "hello", value: nil, table: nil), key: "hello")
         ]
