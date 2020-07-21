@@ -8,11 +8,9 @@
 
 import SwiftUI
 import PhraseSDK
-import Localize_Swift
 
 struct TextRow: Identifiable {
     var id: String = UUID().uuidString
-    
     var title: String
     var key: String
 }
@@ -20,8 +18,9 @@ struct TextRow: Identifiable {
 struct ContentView: View {
     @State
     var rowList: [TextRow] = []
-    
-    private var currentLocale = AppLocale.english
+
+    @State
+    var currentLocale = AppLocale.english
     private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong, .vietnamese]
     
     @State
@@ -32,6 +31,7 @@ struct ContentView: View {
         var buttons: [ActionSheet.Button] = locales.map { locale in
             return .default(Text(locale.description)) {
                 print(locale.description)
+                self.currentLocale = locale
                 self.updateLocale(locale)
             }
         }
@@ -52,12 +52,12 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(Text(R.string.localizable.app_name()))
-            .navigationBarItems(leading: Button(action: updateLocale, label: { Text("Update") }),
+            .navigationBarItems(leading: Button(action: updateLocaleOTA, label: { Text("Update") }),
                                 trailing: Button(action: showLocaleSelectionList, label: { Text("Locale") })
                                     .actionSheet(isPresented: $showLocaleActionSheet, content: { self.localeSelectionActionSheet })
             )
         }
-        .onAppear( perform: { self.updateLocale(.english) } )
+        .onAppear( perform: { self.updateLocale(self.currentLocale) } )
         .alert(isPresented: $showUpdateFailAlert) { () -> Alert in
             Alert(title: Text("Failed to update"), message: nil, dismissButton: .cancel())
         }
@@ -67,34 +67,33 @@ struct ContentView: View {
         self.showLocaleActionSheet.toggle()
     }
     
-    private func updateLocale() {
+    private func updateLocaleOTA() {
         try? Phrase.shared.updateTranslations { result in
             switch result {
             case .success(let update):
                 print("Is Localiation updated? \(update)")
-                self.updateLocale(self.currentLocale)
+                self.refreshView()
             case .failure:
                 self.showUpdateFailAlert = true
             }
         }
     }
     
-    func updateLocale(_ locale: AppLocale) {
-//        Localize.setCurrentLanguage(locale.localeString)
+    private func updateLocale(_ locale: AppLocale) {
         Bundle.setLanguage(locale.localeString)
         self.refreshView()
+
+        let distributionId = Environment.configuration(keyName: .phraseAppDistributionId)
+        let envToken = Environment.configuration(keyName: .phraseAppEnvToken)
+        Phrase.shared.setup(distributionID: distributionId, environmentSecret: envToken, timeout: 10, localeOverride: locale.localeString)
     }
     
     private func refreshView() {
         let rowList: [TextRow] = [
             TextRow(title: R.string.localizable.app_name(), key: "app_name"),
-            TextRow(title: R.string.localizable.hello(), key: "hello")
-//            TextRow(title: R.string.localizable.address(), key: "address"),
-//            TextRow(title: R.string.localizable.done(), key: "done"),
-//            TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
-//            TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
-//            TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
-//            TextRow(title: R.string.localizable.placeholder_test(1, "cake", 10.99), key: "placeholder_test")
+            TextRow(title: R.string.localizable.hello(), key: "hello"),
+            TextRow(title: Phrase.shared.localizedString(forKey: "app_name", value: nil, table: nil), key: "app_name"),
+            TextRow(title: Phrase.shared.localizedString(forKey: "hello", value: nil, table: nil), key: "hello")
         ]
         self.rowList = rowList
     }

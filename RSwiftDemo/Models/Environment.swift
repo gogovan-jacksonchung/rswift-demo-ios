@@ -21,7 +21,7 @@ import UIKit
 import Foundation
 
 enum PlistKey: String {
-    case phraseaAppEnvToken = "PhraseApp Environment Token"
+    case phraseAppEnvToken = "PhraseApp Environment Token"
     case phraseAppDistributionId = "PhraseApp Distribution ID"
 }
 

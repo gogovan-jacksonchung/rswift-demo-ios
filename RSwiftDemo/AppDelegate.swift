@@ -18,10 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let distribtionId = Environment.configuration(keyName: .phraseAppDistributionId)
-        let envToken = Environment.configuration(keyName: .phraseaAppEnvToken)
-        Phrase.shared.setup(distributionID: distribtionId, environmentSecret: envToken)
+        let distributionId = Environment.configuration(keyName: .phraseAppDistributionId)
+        let envToken = Environment.configuration(keyName: .phraseAppEnvToken)
+        Phrase.shared.setup(distributionID: distributionId, environmentSecret: envToken)
         
+        Phrase.shared.debugMode = true
+        if let documentsPath =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.path {
+            print("cachesDirectory: \(documentsPath)")
+        }
+
         return true
     }
 
