@@ -1,13 +1,13 @@
 PODS:
   - Localize-Swift (3.1.0)
-  - PhraseSDK (2.1.0)
+  - PhraseSDK (2.2.1)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
 
 DEPENDENCIES:
   - Localize-Swift (= 3.1.0)
-  - PhraseSDK (= 2.1.0)
+  - PhraseSDK (= 2.2.1)
   - R.swift (= 5.1.0)
 
 SPEC REPOS:
@@ -19,10 +19,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
-  PhraseSDK: 02a34e6a281c6d98dedcd2affa9637659c18fdfb
+  PhraseSDK: 39ace52274d662f1fc1fa074084ddc3cc4afdcb3
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
 
-PODFILE CHECKSUM: 44b2275112b132c29aa403b420370ce4b09d83e1
+PODFILE CHECKSUM: fa673b66a1a23ffcc6d2e89d2b5f35fdf8b669ce
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
