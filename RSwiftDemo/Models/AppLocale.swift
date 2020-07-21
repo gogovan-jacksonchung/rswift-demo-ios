@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AppLocale: String, CustomStringConvertible {
+enum AppLocale: String, CustomStringConvertible, CaseIterable {
     case english = "en"
     case englishSingapore = "en-SG"
     case traditionalChineseHongKong = "zh-HK"

@@ -18,20 +18,19 @@ struct TextRow: Identifiable {
 struct ContentView: View {
     @State
     var rowList: [TextRow] = []
-
     @State
-    var currentLocale = AppLocale.english
-    private let locales: [AppLocale] = [.english, .englishSingapore, .traditionalChineseTaiwan, .traditionalChineseHongKong, .vietnamese]
-    
+    var currentLocale = LocalizationManager.appLocale
     @State
     var showUpdateFailAlert = false
     @State
     var showLocaleActionSheet = false
+
     var localeSelectionActionSheet: ActionSheet {
-        var buttons: [ActionSheet.Button] = locales.map { locale in
+        var buttons: [ActionSheet.Button] = AppLocale.allCases.map { locale in
             return .default(Text(locale.description)) {
                 print(locale.description)
                 self.currentLocale = locale
+                LocalizationManager.appLocale = locale
                 self.updateLocale(locale)
             }
         }
@@ -90,13 +89,12 @@ struct ContentView: View {
     
     private func refreshView() {
         let rowList: [TextRow] = [
-            TextRow(title: R.string.localizable.app_name(), key: "app_name"),
-            TextRow(title: R.string.localizable.hello(), key: "hello"),
-            TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count"),
-            TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count"),
-            TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count"),
-            TextRow(title: Phrase.shared.localizedString(forKey: "app_name", value: nil, table: nil), key: "app_name"),
-            TextRow(title: Phrase.shared.localizedString(forKey: "hello", value: nil, table: nil), key: "hello")
+            TextRow(title: R.string.localizable.app_name(), key: "app_name (R)"),
+            TextRow(title: R.string.localizable.hello(), key: "hello (R)"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 0), key: "item_count (R)"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 1), key: "item_count (R)"),
+            TextRow(title: R.string.localizable.item_count(localized_format_key: 2), key: "item_count (R)"),
+            TextRow(title: NSLocalizedString("hello", comment: ""), key: "hello (NSLocalizedString)")
         ]
         self.rowList = rowList
     }
