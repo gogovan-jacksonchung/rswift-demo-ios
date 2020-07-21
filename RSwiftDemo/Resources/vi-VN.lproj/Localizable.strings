@@ -2,7 +2,7 @@
 
 "hello" = "Xin chào, chào mừng. (v1.5.1)";
 
-"item_count.other" = "%@ items";
+"item_count.other" = "%d items";
 
-"item_count.zero" = "%@ item";
+"item_count.zero" = "%d item";
 

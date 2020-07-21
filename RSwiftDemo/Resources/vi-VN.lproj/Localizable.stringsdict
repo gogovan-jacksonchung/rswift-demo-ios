@@ -12,9 +12,9 @@
         <key>NSStringFormatValueTypeKey</key>
         <string>d</string>
         <key>other</key>
-        <string>%@ items</string>
+        <string>%d items</string>
         <key>zero</key>
-        <string>%@ item</string>
+        <string>%d item</string>
       </dict>
     </dict>
   </dict>
