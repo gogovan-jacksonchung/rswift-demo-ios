@@ -24,7 +24,7 @@
 	<string>$(PHRASEAPP_OTA_DISTRIBUTION_ID)</string>
 	<key>PhraseApp Environment Token</key>
 	<string>$(PHRASEAPP_OTA_ENV_TOKEN)</string>
-	<key>PhraseAppMainBundleProxyEnabled</key>
+	<key>PhraseSDKMainBundleProxyDisabled</key>
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
@@ -33,6 +33,10 @@
 		<string>AveriaLibre-L.ttf</string>
 		<string>AveriaLibre.ttf</string>
 		<string>GdyBkltter1911.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
