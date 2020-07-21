@@ -13,6 +13,7 @@ enum AppLocale: String, CustomStringConvertible, CaseIterable {
     case englishSingapore = "en-SG"
     case traditionalChineseHongKong = "zh-HK"
     case traditionalChineseTaiwan = "zh-Hant"
+    case simpliedChineseTaiwan = "zh-Hans"
     case vietnamese = "vi-VN"
     
     var description: String {
@@ -25,6 +26,8 @@ enum AppLocale: String, CustomStringConvertible, CaseIterable {
             return "繁體中文（香港）"
         case .traditionalChineseTaiwan:
             return "繁體中文"
+        case .simpliedChineseTaiwan:
+            return "简体中文"
         case .vietnamese:
             return "Vietnamese"
         }
