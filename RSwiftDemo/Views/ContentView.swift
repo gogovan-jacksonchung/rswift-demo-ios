@@ -79,7 +79,6 @@ struct ContentView: View {
     }
     
     private func updateLocale(_ locale: AppLocale) {
-        Bundle.setLanguage(locale.localeString)
         self.refreshView()
 
         let distributionId = Environment.configuration(keyName: .phraseAppDistributionId)
